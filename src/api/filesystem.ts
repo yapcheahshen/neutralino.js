@@ -44,12 +44,12 @@ export function appendBinaryFile(path: string, data: ArrayBuffer): Promise<void>
 };
 
 export function readFile(path: string): Promise<string> {
-    return sendMessage('filesystem.readFile', { path });
+    return sendMessage('filesystem.readFile', { path});
 };
 
 export function readBinaryFile(path: string): Promise<ArrayBuffer> {
     return new Promise((resolve: any, reject: any) => {
-        sendMessage('filesystem.readBinaryFile', { path })
+        sendMessage('filesystem.readBinaryFile', { path})
         .then((base64Data: string) => {
             let binaryData: string = window.atob(base64Data);
             let len: number = binaryData.length;

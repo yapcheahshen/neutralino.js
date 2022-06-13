@@ -11,6 +11,7 @@ export * as events from './api/events';
 export * as extensions from './api/extensions';
 export * as updater from './api/updater';
 export * as clipboard from './api/clipboard';
+export * as unzip from './api/unzip';
 
 export { init } from './api/init';
 export { Error, ErrorCode } from './api/protocol';
